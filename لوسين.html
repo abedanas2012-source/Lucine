@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSFiddle Lwevdgoy</title>
+
+  <style>
+    
+  </style>
+
+  
+</head>
+<body>
+  <!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lucine | لوسين – Elegance & Identity</title>
+<meta name="description" content="Lucine — علامة تجارية أردنية بهوية عصرية تجمع بين الأناقة والبساطة والتفاصيل.">
+<meta property="og:title" content="Lucine | لوسين – Elegance & Identity">
+<meta property="og:description" content="Lucine — علامة تجارية أردنية بهوية عصرية تجمع بين الأناقة والبساطة والتفاصيل.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ar_JO">
+<meta name="theme-color" content="#0e0d0b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Tajawal:wght@300;400;500;700&family=Marcellus&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ivory:#faf8f4;
+  --ink:#0e0d0b;
+  --gold:#b39256;
+  --gold-soft:#c9ab72;
+  --muted:#7a756c;
+  --line:rgba(14,13,11,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Tajawal',sans-serif;
+  background:var(--ivory);
+  color:var(--ink);
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+.serif-en{font-family:'Playfair Display',serif;}
+.brand-font{font-family:'Marcellus',serif;letter-spacing:.32em;}
+
+/* ---------- Navbar ---------- */
+nav{
+  position:fixed;top:0;right:0;left:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.15rem 6vw;
+  transition:background .4s ease, box-shadow .4s ease, padding .4s ease;
+}
+nav.scrolled{
+  background:rgba(250,248,244,.88);
+  backdrop-filter:blur(14px);
+  box-shadow:0 1px 0 var(--line);
+  padding:.8rem 6vw;
+}
+.nav-logo{font-family:'Marcellus',serif;letter-spacing:.32em;font-size:1.05rem;color:var(--ink);text-decoration:none;}
+.nav-links{display:flex;gap:2.4rem;list-style:none;}
+.nav-links a{
+  text-decoration:none;color:var(--ink);font-size:.85rem;font-weight:500;
+  position:relative;padding-bottom:4px;transition:color .3s;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:0;right:0;width:0;height:1px;
+  background:var(--gold);transition:width .35s ease;
+}
+.nav-links a:hover{color:var(--gold);}
+.nav-links a:hover::after{width:100%;}
+.nav-cta{
+  text-decoration:none;color:var(--ink);font-size:.8rem;font-weight:500;
+  border:1px solid var(--ink);padding:.55rem 1.3rem;border-radius:999px;
+  transition:all .35s ease;letter-spacing:.03em;
+}
+.nav-cta:hover{background:var(--ink);color:var(--ivory);}
+.burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px;}
+.burger span{width:22px;height:1.5px;background:var(--ink);transition:.3s;}
+@media(max-width:820px){
+  .nav-links,.nav-cta{display:none;}
+  .burger{display:flex;}
+  .mobile-menu{
+    position:fixed;inset:0;z-index:99;background:var(--ivory);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2.2rem;
+    opacity:0;pointer-events:none;transition:opacity .4s ease;
+  }
+  .mobile-menu.open{opacity:1;pointer-events:auto;}
+  .mobile-menu a{text-decoration:none;color:var(--ink);font-size:1.35rem;font-weight:500;}
+}
+@media(min-width:821px){.mobile-menu{display:none;}}
+
+/* ---------- Sections ---------- */
+section{padding:7rem 6vw;position:relative;}
+.container{max-width:1100px;margin:0 auto;}
+.eyebrow{
+  font-family:'Marcellus',serif;letter-spacing:.4em;font-size:.72rem;
+  color:var(--gold);text-transform:uppercase;margin-bottom:1.4rem;
+}
+h2.section-title{font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;margin-bottom:1.2rem;}
+.divider{width:44px;height:1px;background:var(--gold);margin:0 auto 2rem;}
+
+/* ---------- Hero ---------- */
+.hero{
+  min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;position:relative;overflow:hidden;
+  background:radial-gradient(ellipse 90% 65% at 50% 0%, #efe9dd 0%, var(--ivory) 60%);
+}
+.hero::before{
+  content:'';position:absolute;width:60vmax;height:60vmax;border-radius:50%;
+  background:radial-gradient(circle, rgba(179,146,86,.10) 0%, transparent 65%);
+  top:-25vmax;left:50%;transform:translateX(-50%);pointer-events:none;
+}
+.hero-flag{font-size:.85rem;letter-spacing:.2em;color:var(--muted);margin-bottom:1.6rem;font-weight:300;}
+.hero-logo{
+  font-family:'Marcellus',serif;
+  font-size:clamp(3.2rem,13vw,9rem);
+  letter-spacing:.22em;
+  line-height:1;
+  margin-inline-start:.22em; /* optical centering for letter-spacing */
+  background:linear-gradient(120deg,#2a261f 20%, var(--gold) 50%, #2a261f 80%);
+  background-size:200% auto;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:shine 7s linear infinite;
+}
+@keyframes shine{to{background-position:200% center;}}
+.hero-en{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.1rem,2.6vw,1.6rem);color:var(--muted);margin-top:1.6rem;}
+.hero-ar{font-size:clamp(1rem,2.4vw,1.3rem);font-weight:300;margin-top:.9rem;color:var(--ink);}
+.btn{
+  display:inline-flex;align-items:center;gap:.6rem;
+  margin-top:2.8rem;text-decoration:none;
+  font-size:.95rem;font-weight:500;color:var(--ivory);
+  background:var(--ink);padding:1rem 2.6rem;border-radius:999px;
+  transition:all .4s cubic-bezier(.22,1,.36,1);
+  box-shadow:0 10px 30px rgba(14,13,11,.15);
+}
+.btn:hover{background:var(--gold);transform:translateY(-3px);box-shadow:0 16px 40px rgba(179,146,86,.35);}
+.btn svg{width:18px;height:18px;fill:currentColor;}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--ink);box-shadow:none;}
+.btn.ghost:hover{background:var(--ink);color:var(--ivory);}
+.scroll-hint{
+  position:absolute;bottom:2.2rem;left:50%;transform:translateX(-50%);
+  width:1px;height:52px;background:linear-gradient(var(--gold),transparent);
+  animation:drop 2.2s ease-in-out infinite;
+}
+@keyframes drop{0%{transform:translateX(-50%) scaleY(0);transform-origin:top;}50%{transform:translateX(-50%) scaleY(1);transform-origin:top;}51%{transform-origin:bottom;}100%{transform:translateX(-50%) scaleY(0);transform-origin:bottom;}}
+
+/* ---------- About ---------- */
+.about{text-align:center;}
+.about p{max-width:640px;margin:0 auto;font-size:clamp(1.05rem,2.4vw,1.3rem);font-weight:300;line-height:2.1;color:#3d3a34;}
+
+/* ---------- Philosophy ---------- */
+.philosophy{background:#fff;border-block:1px solid var(--line);}
+.phil-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3rem;margin-top:3.5rem;}
+@media(max-width:820px){.phil-grid{grid-template-columns:1fr;gap:2.6rem;}}
+.phil-item{text-align:center;padding:2rem 1rem;transition:transform .5s cubic-bezier(.22,1,.36,1);}
+.phil-item:hover{transform:translateY(-8px);}
+.phil-icon{
+  width:64px;height:64px;margin:0 auto 1.6rem;border:1px solid var(--line);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;color:var(--gold);
+  transition:all .4s ease;background:var(--ivory);
+}
+.phil-item:hover .phil-icon{border-color:var(--gold);box-shadow:0 8px 24px rgba(179,146,86,.18);}
+.phil-icon svg{width:26px;height:26px;stroke:currentColor;fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;}
+.phil-en{font-family:'Marcellus',serif;letter-spacing:.3em;font-size:.95rem;margin-bottom:.7rem;}
+.phil-ar{color:var(--muted);font-weight:300;font-size:.98rem;}
+
+/* ---------- Experience ---------- */
+.experience{
+  padding:0;color:var(--ivory);text-align:center;
+  background:
+    linear-gradient(rgba(14,13,11,.72), rgba(14,13,11,.82)),
+    radial-gradient(ellipse 70% 90% at 20% 20%, #3a2f1d 0%, transparent 55%),
+    radial-gradient(ellipse 70% 90% at 80% 80%, #23201a 0%, transparent 55%),
+    radial-gradient(ellipse 60% 60% at 65% 30%, rgba(179,146,86,.35) 0%, transparent 60%),
+    var(--ink);
+  background-attachment:fixed;
+}
+.exp-inner{min-height:78svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:7rem 6vw;}
+.exp-quote{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.6rem,4.6vw,3rem);line-height:1.5;max-width:820px;}
+.exp-sub{margin-top:1.4rem;color:var(--gold-soft);letter-spacing:.25em;font-size:.8rem;font-family:'Marcellus',serif;text-transform:uppercase;}
+@media(max-width:820px){.experience{background-attachment:scroll;}}
+
+/* ---------- Instagram ---------- */
+.insta{text-align:center;}
+.insta-handle{
+  display:inline-flex;align-items:center;gap:.7rem;margin-top:2rem;text-decoration:none;
+  font-family:'Marcellus',serif;letter-spacing:.15em;font-size:clamp(1.2rem,3vw,1.7rem);
+  color:var(--ink);border-bottom:1px solid var(--gold);padding-bottom:.5rem;
+  transition:color .3s, letter-spacing .4s ease;
+}
+.insta-handle:hover{color:var(--gold);letter-spacing:.22em;}
+.insta-handle svg{width:26px;height:26px;fill:currentColor;}
+
+/* ---------- Final CTA ---------- */
+.final{
+  text-align:center;color:var(--ivory);
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 110%, rgba(179,146,86,.28) 0%, transparent 60%),
+    linear-gradient(180deg,#141210, var(--ink));
+  padding:9rem 6vw;
+}
+.final-logo{
+  font-family:'Marcellus',serif;font-size:clamp(2.6rem,9vw,5.5rem);letter-spacing:.25em;
+  margin-inline-start:.25em;color:var(--ivory);
+}
+.final-tag{font-family:'Playfair Display',serif;font-style:italic;color:var(--gold-soft);font-size:clamp(1rem,2.6vw,1.4rem);margin-top:1rem;}
+.final .btn{margin-top:2.6rem;background:var(--ivory);color:var(--ink);}
+.final .btn:hover{background:var(--gold);color:var(--ivory);}
+
+/* ---------- Footer ---------- */
+footer{
+  text-align:center;padding:2.6rem 6vw;border-top:1px solid rgba(250,248,244,.08);
+  background:var(--ink);color:#8f8a80;font-size:.85rem;font-weight:300;
+}
+footer .f-brand{font-family:'Marcellus',serif;letter-spacing:.3em;color:var(--ivory);font-size:.95rem;margin-bottom:.6rem;}
+footer a{color:var(--gold-soft);text-decoration:none;}
+footer a:hover{color:var(--gold);}
+footer .f-copy{margin-top:.8rem;font-size:.75rem;color:#5c584f;}
+
+/* ---------- Reveal animations ---------- */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .9s cubic-bezier(.22,1,.36,1), transform .9s cubic-bezier(.22,1,.36,1);}
+.reveal.visible{opacity:1;transform:none;}
+.reveal.d1{transition-delay:.12s;}
+.reveal.d2{transition-delay:.24s;}
+.reveal.d3{transition-delay:.36s;}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;}
+  .reveal{opacity:1;transform:none;}
+}
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<!-- Navbar -->
+<nav id="navbar">
+  <a href="#top" class="nav-logo">LUCINE</a>
+  <ul class="nav-links">
+    <li><a href="#about">من نحن</a></li>
+    <li><a href="#philosophy">فلسفتنا</a></li>
+    <li><a href="#experience">التجربة</a></li>
+    <li><a href="#instagram">إنستغرام</a></li>
+  </ul>
+  <a class="nav-cta" href="https://www.instagram.com/lucine9739/" target="_blank" rel="noopener">تابعنا</a>
+  <button class="burger" id="burger" aria-label="القائمة"><span></span><span></span><span></span></button>
+</nav>
+
+<!-- Mobile menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">من نحن</a>
+  <a href="#philosophy">فلسفتنا</a>
+  <a href="#experience">التجربة</a>
+  <a href="https://www.instagram.com/lucine9739/" target="_blank" rel="noopener">إنستغرام</a>
+</div>
+
+<!-- 1. Hero -->
+<header class="hero" id="top">
+  <div class="hero-flag reveal">صُنع بشغف في الأردن&nbsp;🇯🇴</div>
+  <h1 class="hero-logo reveal d1">LUCINE</h1>
+  <p class="hero-en reveal d2">Elegance, Reimagined.</p>
+  <p class="hero-ar reveal d2">تفاصيل صُممت لتعبّر عنك.</p>
+  <a class="btn reveal d3" href="https://www.instagram.com/lucine9739/" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1a6.7 6.7 0 1 0 0 13.4 6.7 6.7 0 0 0 0-13.4zm0 11a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6zm8.5-11.3a1.6 1.6 0 1 1-3.2 0 1.6 1.6 0 0 1 3.2 0z"/></svg>
+    تابعنا على Instagram
+  </a>
+  <div class="scroll-hint"></div>
+</header>
+
+<!-- 2. About -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="eyebrow reveal">About Lucine</div>
+    <h2 class="section-title reveal d1">عن لوسين</h2>
+    <div class="divider reveal d1"></div>
+    <p class="reveal d2">Lucine هي علامة تجارية تهتم بالتفاصيل، وتجمع بين البساطة والأناقة لصناعة هوية عصرية تعبّر عن أسلوبك.</p>
+  </div>
+</section>
+
+<!-- 3. Philosophy -->
+<section class="philosophy" id="philosophy">
+  <div class="container" style="text-align:center;">
+    <div class="eyebrow reveal">Our Philosophy</div>
+    <h2 class="section-title reveal d1">فلسفتنا</h2>
+    <div class="divider reveal d1"></div>
+    <div class="phil-grid">
+      <div class="phil-item reveal">
+        <div class="phil-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 3l2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5z"/></svg>
+        </div>
+        <div class="phil-en">ELEGANCE</div>
+        <div class="phil-ar">الأناقة في التفاصيل.</div>
+      </div>
+      <div class="phil-item reveal d1">
+        <div class="phil-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div class="phil-en">SIMPLICITY</div>
+        <div class="phil-ar">البساطة التي تترك أثرًا.</div>
+      </div>
+      <div class="phil-item reveal d2">
+        <div class="phil-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-4.6-9.3-9A5.6 5.6 0 0 1 12 6.6 5.6 5.6 0 0 1 21.3 12C19 16.4 12 21 12 21z"/></svg>
+        </div>
+        <div class="phil-en">IDENTITY</div>
+        <div class="phil-ar">أسلوب يعكس شخصيتك.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Brand Experience -->
+<section class="experience" id="experience">
+  <div class="exp-inner">
+    <div class="eyebrow reveal">The Brand Experience</div>
+    <p class="exp-quote reveal d1">"More than a style.<br>It's a statement."</p>
+    <div class="exp-sub reveal d2">Lucine — Elegance & Identity</div>
+  </div>
+</section>
+
+<!-- 5. Instagram -->
+<section class="insta" id="instagram">
+  <div class="container">
+    <div class="eyebrow reveal">Instagram</div>
+    <h2 class="section-title reveal d1">اكتشف عالم Lucine على Instagram.</h2>
+    <div class="divider reveal d1"></div>
+    <a class="insta-handle reveal d2" href="https://www.instagram.com/lucine9739/" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1a6.7 6.7 0 1 0 0 13.4 6.7 6.7 0 0 0 0-13.4zm0 11a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6zm8.5-11.3a1.6 1.6 0 1 1-3.2 0 1.6 1.6 0 0 1 3.2 0z"/></svg>
+      @lucine9739
+    </a>
+  </div>
+</section>
+
+<!-- 6. Final CTA -->
+<section class="final">
+  <div class="final-logo reveal">LUCINE</div>
+  <p class="final-tag reveal d1">Your style. Your identity.</p>
+  <a class="btn reveal d2" href="https://www.instagram.com/lucine9739/" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zm0 3.1a6.7 6.7 0 1 0 0 13.4 6.7 6.7 0 0 0 0-13.4zm0 11a4.3 4.3 0 1 1 0-8.6 4.3 4.3 0 0 1 0 8.6zm8.5-11.3a1.6 1.6 0 1 1-3.2 0 1.6 1.6 0 0 1 3.2 0z"/></svg>
+    Follow Lucine
+  </a>
+</section>
+
+<!-- 7. Footer -->
+<footer>
+  <div class="f-brand">LUCINE&nbsp;🇯🇴</div>
+  <div>Instagram: <a href="https://www.instagram.com/lucine9739/" target="_blank" rel="noopener">@lucine9739</a></div>
+  <div class="f-copy">© 2026 Lucine. All rights reserved.</div>
+</footer>
+
+<script>
+// Navbar scroll state
+const nav = document.getElementById('navbar');
+addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', scrollY > 40);
+}, {passive:true});
+
+// Mobile menu
+const burger = document.getElementById('burger');
+const menu = document.getElementById('mobileMenu');
+burger.addEventListener('click', () => menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+// Scroll reveal
+const io = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+  });
+}, {threshold:.15});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
+</body>
+</html>
+
+  <script>
+    
+  </script>
+</body>
+</html>
